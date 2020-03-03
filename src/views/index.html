@@ -24,7 +24,10 @@
         <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
         <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:700&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     </head>
     <body>
         <header class="header">
@@ -32,29 +35,42 @@
                 <div class="header-nav">
                     <img src="../img/Your-Logo.svg" alt="" class="header-nav__logo">
                     <ul class="header-nav__menu">
-                        <li class="header-nav__item"><a href="#" class="header-nav__link">Home</a></li>
-                        <li class="header-nav__item"><a href="#" class="header-nav__link">About</a></li>
-                        <li class="header-nav__item"><a href="#" class="header-nav__link">Servicing</a></li>
-                        <li class="header-nav__item"><a href="#" class="header-nav__link">Portfolio</a></li>
-                        <li class="header-nav__item"><a href="#" class="header-nav__link">Blog</a></li>
-                        <li class="header-nav__item"><a href="#" class="header-nav__link">Contact us</a></li>
-                        <li class="header-nav__search">&#960;&#960;</li>
-                    </ul>
-                </div>
+                        <li class="header-nav__item"><a href="#home" class="header-nav__link">Home</a></li>
+                        <li class="header-nav__item"><a href="#about" class="header-nav__link">About</a></li>
+                        <li class="header-nav__item"><a href="#servicing" class="header-nav__link">Servicing</a></li>
+                        <li class="header-nav__item"><a href="#portfolio" class="header-nav__link">Portfolio</a></li>
+                        <li class="header-nav__item"><a href="#blog" class="header-nav__link">Blog</a></li>
+                        <li class="header-nav__item"><a href="#contacts" class="header-nav__link">Contact us</a></li>
+                        <input id="search" class="header-nav__input" type="text" placeholder="Search..">
+                        <button class="header-nav__search-btn" id="search-btn"></button>
+                    </ul> 
+                    <div class="header-nav__toggle-menu" id="toggleMenu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>                
+            </div>            
+        </header>
+        <div class="page-main" id="home">
+            <div class="wrap">
                 <div class="content-wrap">
-                    <div class="header-content">             
-                        <h1 class="header-content__title">Web development project</h1>
-                        <p class="header-content__subtitle">Very suitable to support all web development projects</p>
-                        <div class="header-content-buttons">
-                            <a href="" class="header-content__btn">OUR SERVICES</a>
-                            <a href="" class="header-content__btn header-content__btn_bg">HIRE IS NOW</a>
+                    <div class="page-main-content">             
+                        <h1 class="page-main-content__title">Web development project</h1>
+                        <p class="page-main-content__subtitle">Very suitable to support all web development projects</p>
+                        <div class="page-main-content-buttons">
+                            <a href="#servicing" class="page-main-content__btn">OUR SERVICES</a>
+                            <a href="#form" class="page-main-content__btn page-main-content__btn_bg">HIRE IS NOW</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="header-bg"><img src="../img/main-bg.jpg" alt="" class="header__img"></div>
-        </header>
-        <div class="page">
+            <div class="page-main-bg">
+                <img src="../img/main-bg.jpg" alt="" class="page-main__img">
+                <svg class="page-main__arrow" xmlns="http://www.w3.org/2000/svg" width="23" height="15"><path d="M10.285 14.488L.507 4.614a1.747 1.747 0 010-2.461L2.132.512a1.707 1.707 0 012.437 0L11.5 7.51l6.93-7a1.707 1.707 0 012.438 0l1.625 1.642a1.747 1.747 0 010 2.461l-9.778 9.874a1.698 1.698 0 01-2.43 0z" fill="#fff"/></svg>
+            </div>
+        </div>
+        <div class="page" id="about">
             <div class="wrap">
                 <h2 class="page__title">About Us</h2>
                 <p class="page__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
@@ -77,43 +93,43 @@
                 </div>
             </div>
         </div>
-        <div class="page page_green">
+        <div class="page page_green" id="servicing">
             <div class="wrap">
                 <h2 class="page__title">Our Services</h2>
                 <p class="page__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
                 <div class="services">
                     <div class="services-item">
-                        <img src="../img/smartphone.png" alt="" class="services__img">
+                        <div class="services__img"></div>
                         <h3 class="services__title">Research</h3>
                         <p class="services__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blan- ditiis praesentium voluptatum iti atque corrupti quos.</p>
                         <a href="" class="services__btn">READ MORE</a>
                     </div>
                     <div class="services-item">
-                        <img src="../img/smartphone.png" alt="" class="services__img">
+                        <div class="services__img"></div>
                         <h3 class="services__title">Portfolio</h3>
                         <p class="services__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui bland- itiis praesentium voluptatum iti atque corrupti quos.</p>
                         <a href="" class="services__btn">READ MORE</a>
                     </div>
                     <div class="services-item">
-                        <img src="../img/smartphone.png" alt="" class="services__img">
+                        <div class="services__img"></div>
                         <h3 class="services__title">Support</h3>
                         <p class="services__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui bland- itiis praesentium voluptatum iti atque corrupti quos.</p>
                         <a href="" class="services__btn">READ MORE</a>
                     </div>
                     <div class="services-item">
-                        <img src="../img/smartphone.png" alt="" class="services__img">
+                        <div class="services__img"></div>
                         <h3 class="services__title">Documentation</h3>
                         <p class="services__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blan- ditiis praesentium voluptatum iti atque corrupti quos.</p>
                         <a href="" class="services__btn">READ MORE</a>
                     </div>
                     <div class="services-item">
-                        <img src="../img/smartphone.png" alt="" class="services__img">
+                        <div class="services__img"></div>
                         <h3 class="services__title">Development</h3>
                         <p class="services__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blan- ditiis praesentium voluptatum iti atque corrupti quos.</p>
                         <a href="" class="services__btn">READ MORE</a>
                     </div>
                     <div class="services-item">
-                        <img src="../img/smartphone.png" alt="" class="services__img">
+                        <div class="services__img"></div>
                         <h3 class="services__title">Design</h3>
                         <p class="services__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blan- ditiis praesentium voluptatum iti atque corrupti quos.</p>
                         <a href="" class="services__btn">READ MORE</a>
@@ -121,56 +137,56 @@
                 </div>
             </div>
         </div>
-        <div class="page">
+        <div class="page" id="portfolio">
             <div class="wrap">
                 <h2 class="page__title">Latest Works</h2>
                 <p class="page__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
                 <div class="block-works">
                     <div class="block-works-buttons">
-                        <button class="block-works__btn">ALL</button>
-                        <button class="block-works__btn">WEB DESIGN</button>
-                        <button class="block-works__btn">UI/UX DESIGN</button>
-                        <button class="block-works__btn">MOCKUPS</button>
+                        <button class="block-works__btn active" id="all">ALL</button>
+                        <button class="block-works__btn"id="web">WEB DESIGN</button>
+                        <button class="block-works__btn" id="uiux">UI/UX DESIGN</button>
+                        <button class="block-works__btn" id="mockups">MOCKUPS</button>
                     </div>
                     <div class="block-works-list">
-                        <div class="block-works-item">
+                        <div class="block-works-item uiux">
                             <img src="../img/watch.jpg" alt="" class="block-works__img">
                             <h3 class="block-works__title">Hand Watch<span>ui/ux design</span></h3>
                         </div>
-                        <div class="block-works-item">
+                        <div class="block-works-item web">
                             <img src="../img/tea.jpg" alt="" class="block-works__img">
                             <h3 class="block-works__title">Tea<span>Web design</span></h3>
                         </div>
-                        <div class="block-works-item">
+                        <div class="block-works-item web">
                             <img src="../img/sleepwear.jpg" alt="" class="block-works__img">
                             <h3 class="block-works__title">Sleepwear<span>Web design</span></h3>
                         </div>
-                        <div class="block-works-item">
+                        <div class="block-works-item mockups">
                             <img src="../img/flask.jpg" alt="" class="block-works__img">
                             <h3 class="block-works__title">Flask<span>Mockups</span></h3>
                         </div>
-                        <div class="block-works-item">
+                        <div class="block-works-item mockups">
                             <img src="../img/wine.jpg" alt="" class="block-works__img">
-                            <h3 class="block-works__title">Wine<span>ui/Mockups</span></h3>
+                            <h3 class="block-works__title">Wine<span>Mockups</span></h3>
                         </div>
-                        <div class="block-works-item">
+                        <div class="block-works-item uiux">
                             <img src="../img/handbag.jpg" alt="" class="block-works__img">
                             <h3 class="block-works__title">Handbag<span>ui/ux design</span></h3>
                         </div>
-                        <!-- <div class="block-works-item">
+                        <div class="block-works-item works-invisible web">
                             <img src="../img/handbag.jpg" alt="" class="block-works__img">
                             <h3 class="block-works__title">Hand Watch<span>Web design</span></h3>
                         </div>
-                        <div class="block-works-item">
+                        <div class="block-works-item works-invisible mockups">
                             <img src="../img/handbag.jpg" alt="" class="block-works__img">
                             <h3 class="block-works__title">Hand Watch<span>Mockups</span></h3>
                         </div>
-                        <div class="block-works-item">
+                        <div class="block-works-item works-invisible uiux">
                             <img src="../img/handbag.jpg" alt="" class="block-works__img">
                             <h3 class="block-works__title">Hand Watch<span>ui/ux design</span></h3>
-                        </div> -->
+                        </div>
                     </div>
-                    <button class="block-works__btn block-works__btn_big">VIEW ALL</button>
+                    <button class="block-works__btn block-works__btn_big" id="works-btn">VIEW ALL</button>
                 </div>
             </div>
         </div>
@@ -240,110 +256,110 @@
             <div class="wrap">
                 <h2 class="page__title">Our Team Member</h2>
                 <p class="page__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
-                <div class="block-team">
-                    <div class="block-team-item">
-                        <img src="../img/john.jpg" alt="" class="block-team__img">
-                        <h3 class="block-team__name">John Doe</h3>
-                        <p class="block-team__position">General Manager</p>
-                        <ul class="block-team-social">
+                <div class="team-slider">
+                    <div class="team-slider-item">
+                        <img src="../img/john.jpg" alt="" class="team-slider__img">
+                        <h3 class="team-slider__name">John Doe</h3>
+                        <p class="team-slider__position">General Manager</p>
+                        <ul class="team-slider-social">
                             <li><a href=""><img src="../img/facebook-f.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/twitter.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/comments.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/dribbble.svg" alt=""></a></li>
                         </ul>
                     </div>
-                    <div class="block-team-item">
-                        <img src="../img/Alexa.jpg" alt="" class="block-team__img">
-                        <h3 class="block-team__name">Alexa Biru</h3>
-                        <p class="block-team__position">Office Director</p>
-                        <ul class="block-team-social">
+                    <div class="team-slider-item">
+                        <img src="../img/Alexa.jpg" alt="" class="team-slider__img">
+                        <h3 class="team-slider__name">Alexa Biru</h3>
+                        <p class="team-slider__position">Office Director</p>
+                        <ul class="team-slider-social">
                             <li><a href=""><img src="../img/facebook-f.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/twitter.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/comments.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/dribbble.svg" alt=""></a></li>
                         </ul>
                     </div>
-                    <div class="block-team-item">
-                        <img src="../img/Ronobir.jpg" alt="" class="block-team__img">
-                        <h3 class="block-team__name">Ronobir sing</h3>
-                        <p class="block-team__position">Admin</p>
-                        <ul class="block-team-social">
+                    <div class="team-slider-item">
+                        <img src="../img/Ronobir.jpg" alt="" class="team-slider__img">
+                        <h3 class="team-slider__name">Ronobir sing</h3>
+                        <p class="team-slider__position">Admin</p>
+                        <ul class="team-slider-social">
                             <li><a href=""><img src="../img/facebook-f.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/twitter.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/comments.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/dribbble.svg" alt=""></a></li>
                         </ul>
                     </div>
-                    <!-- <div class="block-team-item">
-                        <img src="" alt="" class="block-team__img">
-                        <h3 class="block-team__name">John Doe</h3>
-                        <p class="block-team__position">General Manager</p>
-                        <ul class="block-team-social">
+                    <div class="team-slider-item">
+                        <img src="../img/john.jpg" alt="" class="team-slider__img">
+                        <h3 class="team-slider__name">John Doe</h3>
+                        <p class="team-slider__position">General Manager</p>
+                        <ul class="team-slider-social">
                             <li><a href=""><img src="../img/facebook-f.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/twitter.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/comments.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/dribbble.svg" alt=""></a></li>
                         </ul>
                     </div>
-                    <div class="block-team-item">
-                        <img src="" alt="" class="block-team__img">
-                        <h3 class="block-team__name">Alexa Biru</h3>
-                        <p class="block-team__position">Office Director</p>
-                        <ul class="block-team-social">
+                    <div class="team-slider-item">
+                        <img src="../img/Alexa.jpg" alt="" class="team-slider__img">
+                        <h3 class="team-slider__name">Alexa Biru</h3>
+                        <p class="team-slider__position">Office Director</p>
+                        <ul class="team-slider-social">
                             <li><a href=""><img src="../img/facebook-f.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/twitter.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/comments.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/dribbble.svg" alt=""></a></li>
                         </ul>
                     </div>
-                    <div class="block-team-item">
-                        <img src="" alt="" class="block-team__img">
-                        <h3 class="block-team__name">Ronobir sing</h3>
-                        <p class="block-team__position">Ad</p>
-                        <ul class="block-team-social">
+                    <div class="team-slider-item">
+                        <img src="../img/Ronobir.jpg" alt="" class="team-slider__img">
+                        <h3 class="team-slider__name">Ronobir sing</h3>
+                        <p class="team-slider__position">Admin</p>
+                        <ul class="team-slider-social">
                             <li><a href=""><img src="../img/facebook-f.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/twitter.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/comments.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/dribbble.svg" alt=""></a></li>
                         </ul>
                     </div>
-                    <div class="block-team-item">
-                        <img src="" alt="" class="block-team__img">
-                        <h3 class="block-team__name">John Doe</h3>
-                        <p class="block-team__position">General Manager</p>
-                        <ul class="block-team-social">
+                    <div class="team-slider-item">
+                        <img src="../img/john.jpg" alt="" class="team-slider__img">
+                        <h3 class="team-slider__name">John Doe</h3>
+                        <p class="team-slider__position">General Manager</p>
+                        <ul class="team-slider-social">
                             <li><a href=""><img src="../img/facebook-f.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/twitter.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/comments.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/dribbble.svg" alt=""></a></li>
                         </ul>
                     </div>
-                    <div class="block-team-item">
-                        <img src="" alt="" class="block-team__img">
-                        <h3 class="block-team__name">Alexa Biru</h3>
-                        <p class="block-team__position">Office Director</p>
-                        <ul class="block-team-social">
+                    <div class="team-slider-item">
+                        <img src="../img/Alexa.jpg" alt="" class="team-slider__img">
+                        <h3 class="team-slider__name">Alexa Biru</h3>
+                        <p class="team-slider__position">Office Director</p>
+                        <ul class="team-slider-social">
                             <li><a href=""><img src="../img/facebook-f.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/twitter.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/comments.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/dribbble.svg" alt=""></a></li>
                         </ul>
                     </div>
-                    <div class="block-team-item">
-                        <img src="" alt="" class="block-team__img">
-                        <h3 class="block-team__name">Ronobir sing</h3>
-                        <p class="block-team__position">Ad</p>
-                        <ul class="block-team-social">
+                    <div class="team-slider-item">
+                        <img src="../img/Ronobir.jpg" alt="" class="team-slider__img">
+                        <h3 class="team-slider__name">Ronobir sing</h3>
+                        <p class="team-slider__position">Admin</p>
+                        <ul class="team-slider-social">
                             <li><a href=""><img src="../img/facebook-f.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/twitter.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/comments.svg" alt=""></a></li>
                             <li><a href=""><img src="../img/dribbble.svg" alt=""></a></li>
                         </ul>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="page page_green">
+        <div class="page page_green" id="blog">
             <div class="wrap">
                 <h2 class="page__title">Blog</h2>
                 <p class="page__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
@@ -361,7 +377,7 @@
                         </div>
                         <p class="block-blog__desc">Dolore magna aliqua. Ut enim ad minim veniam, quis nos- trud exercitation ullamco laboris nisi ut aliquip ex ea com- modo consequat...</p>
                     </div>
-                    <div class="block-blog-item active">
+                    <div class="block-blog-item order">
                         <h3 class="block-blog__title"><a href="">SEO Quis Vestibulum</a></h3>
                         <div class="block-blog-date">
                             <img src="../img/calendar.png" alt="">
@@ -374,10 +390,10 @@
                     <div class="block-blog-item">
                         <img src="../img/blogimg2.jpg" alt="" class="block-blog__img">
                     </div>
-                    <div class="block-blog-item  active">
+                    <div class="block-blog-item  order">
                         <img src="../img/blogimg3.jpg" alt="" class="block-blog__img">
                     </div>
-                    <div class="block-blog-item active">
+                    <div class="block-blog-item order">
                         <h3 class="block-blog__title"><a href="">SEO Quis Vestibulum</a></h3>
                         <div class="block-blog-date">
                             <img src="../img/calendar.png" alt="">
@@ -387,11 +403,24 @@
                         </div>
                         <p class="block-blog__desc">Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ПРОВЕРКАexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
                     </div>
+                    <div class="block-blog-item blog-invisible">
+                        <h3 class="block-blog__title"><a href="">SEO Quis Vestibulum</a></h3>
+                        <div class="block-blog-date">
+                            <img src="../img/calendar.png" alt="">
+                            <p class="block-blog__text">14.07.2017</p>
+                            <img src="../img/blog-icon.png" alt="">
+                            <p class="block-blog__text">Development</p>
+                        </div>
+                        <p class="block-blog__desc">Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+                    </div>
+                    <div class="block-blog-item blog-invisible">
+                        <img src="../img/blogimg2.jpg" alt="" class="block-blog__img">
+                    </div>
                 </div>
-                <button class="page__btn">MORE VIEW</button>
+                <button class="page__btn" id="blog-btn">MORE VIEW</button>
             </div>
         </div>
-        <footer class="footer">
+        <footer class="footer" id="contacts">
             <div class="wrap">
                 <h2 class="footer__title">Contact Us</h2>
                 <p class="footer__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
@@ -411,7 +440,7 @@
                         <a href="" class="block-contacts__link">quickmasud@yahoo.com</a>
                     </div>
                 </div>
-                <div class="block-form">
+                <div class="block-form" id="form">
                     <input type="name" placeholder="Your NAME" name="name" required class="block-form__input">
                     <input type="email" placeholder="Your Email" name="email" required class="block-form__input">
                     <textarea name="comments" cols="100" rows="4" placeholder="Write Massage" class="block-form__input block-form__input_width"></textarea>
@@ -428,5 +457,134 @@
         @@include("../blocks/modules/footer/footer.html")
         <script src="js/main.js"></script>
         <script src="js/vendor.js"></script>
+        <script>
+            // плавный переход по якорным ссылкам
+            $(document).ready(function(){
+                $(".header-nav__menu").on("click","a", function (event) {
+                    event.preventDefault();
+                    var id  = $(this).attr('href'),
+                        top = $(id).offset().top;
+                    $('body,html').animate({scrollTop: top}, 1500);
+                });
+                $(".page-main-content-buttons").on("click","a", function (event) {
+                    event.preventDefault();
+                    var id  = $(this).attr('href'),
+                        top = $(id).offset().top;
+                    $('body,html').animate({scrollTop: top}, 1500);
+                });
+            });
+            //кнопка для открытия поиска
+            $(document).ready(function() { 
+                $("#search-btn").on("click", function() {
+                  $("#search").toggle();
+                });
+            });
+            // кнопка меню
+            $(document).ready(function() { 
+                $("#toggleMenu").on("click", function() {
+                  $(".header-nav__menu").toggle();
+                });
+            });
+            //изменение размера меню при скролле
+            $(document).scroll(function(){
+                if ($(window).scrollTop() > 0){
+                    $(".header").addClass("header-active");
+                    $(".header-nav__menu").addClass("menu-active");
+                }
+                else{
+                    $(".header").removeClass("header-active");
+                    $(".header-nav__menu").removeClass("menu-active");
+                }
+            });
+            // кнопка показать все в блоке works
+            $(document).ready(function(){
+                $("#works-btn").click(function(){
+                    $(".works-invisible").fadeIn();
+                    $(".works-invisible").fadeIn("slow");
+                    $(".works-invisible").fadeIn(3000);
+                });
+            });
+            // кнопка показать все в блоке blog
+            $(document).ready(function(){
+                $("#blog-btn").click(function(){
+                    $(".blog-invisible").fadeIn();
+                    $(".blog-invisible").fadeIn("slow");
+                    $(".blog-invisible").fadeIn(3000);
+                });
+            });
+            
+            // настройки отбора в блоке works
+            $(document).ready(function(){
+              $("#web").click(function(){
+                $("#web").addClass("active");
+                $("#uiux, #all, #mockups").removeClass("active");
+                $(".uiux").hide();
+                $(".mockups").hide();
+                $("#works-btn").hide()
+                $(".web").show();
+              });
+            });
+            $(document).ready(function(){
+              $("#uiux").click(function(){
+                $("#uiux").addClass("active");
+                $("#web, #all, #mockups").removeClass("active");
+                $(".web").hide();
+                $(".mockups").hide();
+                $("#works-btn").hide()
+                $(".uiux").show();
+              });
+            });
+            $(document).ready(function(){
+              $("#mockups").click(function(){
+                $("#mockups").addClass("active");
+                $("#web, #uiux, #all").removeClass("active"); 
+                $(".web").hide();
+                $(".uiux").hide();
+                $("#works-btn").hide()
+                $(".mockups").show();
+              });
+            });
+            $(document).ready(function(){
+              $("#all").click(function(){
+                $("#all").addClass("active");
+                $("#web, #uiux, #mockups").removeClass("active");            
+                $(".web").show();
+                $(".uiux").show();
+                $(".mockups").show();
+              });
+            });
+            // подключение слайдера
+            $('.team-slider').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                dots: true,
+                arrows: false,
+                responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                        }
+                    },
+                    {
+                    breakpoint: 700,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+              ]
+            });
+        </script>
     </body>
 </html>
