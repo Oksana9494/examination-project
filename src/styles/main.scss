@@ -878,7 +878,39 @@ body {
         	:hover {
         		background: $blue-color;
         	}
+        	:hover .team-slider__facebook {
+        		background-image: url(../img/facebook-f-w.svg);
+        	}
+        	:hover .team-slider__twitter {
+        		background-image: url(../img/twitter-w.svg);
+        	}
+        	:hover .team-slider__comments {
+        		background-image: url(../img/comments-w.svg);
+        	}
+        	:hover .team-slider__dribbble {
+        		background-image: url(../img/dribbble-w.svg);
+        	}
         }
+	}
+	&__facebook {
+		background-image: url(../img/facebook-f.svg);
+		height: 28px;
+		width: 30px;
+	}
+	&__twitter {
+		background-image: url(../img/twitter.svg);
+		height: 28px;
+		width: 30px;
+	}
+	&__comments {
+		background-image: url(../img/comments.svg);
+		height: 28px;
+		width: 30px;
+	}
+	&__dribbble {
+		background-image: url(../img/dribbble.svg);
+		height: 28px;
+		width: 30px;
 	}
 }
 .slick-list {
